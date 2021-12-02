@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Sign Up
+    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sign up</h1>
+    <form action="/users/createUser" method="POST">
+        <input type="text" name="name" id="" placeholder="Name">
+
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <input type="password" name="password" id="" placeholder="Enter Password" required>
+        <input type="password" name="confirm_password" id="" placeholder="Confirm Password" required>
+
+        <button type="submit">SignUp</button>
+    </form>
+</body>
+</html>
