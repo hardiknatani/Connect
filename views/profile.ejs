@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%=title%></title>
 </head>
 <body>
-    <h1>Hey Lol</h1>
-    <form action="/users/adduser" method="POST">
-        <input type="text" name="name" placeholder="Enter Name">
-        <button type="submit">Add User</button>
-    </form>
+    <h1>User Profile Page</h1>
+    <p><%= user.name %></p>
+    <p><%= user.email %></p>
 </body>
 </html>

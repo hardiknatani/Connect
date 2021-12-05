@@ -1,0 +1,25 @@
+<header>
+
+    <p>Connect  </p>
+
+    <% if (locals.user){%>
+    
+           <div class="auth">
+            <%=user.name%>
+        
+    
+            <a href="/users/signout">  Sign Out</a>
+           </div>
+        
+        <%}else{%>
+        
+<div class="auth">
+    <a href="/users/signin">Sign In</a>
+            
+        
+    <a href="/users/signup">Sign Up</a>
+</div>
+                <%}%>
+
+
+</header>
