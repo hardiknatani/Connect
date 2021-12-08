@@ -1,13 +1,25 @@
 const User = require('../models/user');
+const Post = require('../models/post');
 
 
 module.exports.profile = function(req, res){
-    return res.render('profile', {
-        title: 'User Profile',
-        user : req.user
+    User.findById(req.params.id,(err,user)=>{
+        return res.render('profile', {
+            title: 'User Profile',
+            profile_user:user
+        })
     })
-
    
+}
+
+module.exports.update = (req,res)=>{
+    if(req.user.id==req.params.id){
+        User.findByIdAndUpdate(req.params.id,req.body,function(err,user){
+            return res.redirect('back')
+        })
+    }else{
+        res.status(401).send('Unauthorized');
+    }
 }
 
 
@@ -26,7 +38,8 @@ module.exports.signup = function(req, res){
 // render the sign in page
 module.exports.signin = function(req, res){
     if (req.isAuthenticated()){
-        res.redirect('/users/profile')
+        res.redirect('/users/profile');
+        console.log(res.locals.user)
     }else {
     return res.render('signin', {
         title: "Connect | Sign In"
@@ -60,11 +73,15 @@ module.exports.createUser = function(req, res){
 
 // sign in and create a session for the user
 module.exports.createSession = function(req, res){
-return res.redirect('/users/profile')}
+    req.flash('success',"Logged in Successfully")
+return res.redirect('/')}
 
 
 module.exports.destroySession=(req,res)=>{
     req.logout()
+    req.flash('success',"Logged out Successfully")
     
     return res.redirect('/')
 }
+
+
