@@ -33,7 +33,7 @@ app.use(session({
     },
     store: new MongoStore(
         {
-            mongoUrl: "mongodb://localhost/connect_userdb",
+            mongoUrl: process.env.MONGODB_URI || "mongodb://localhost/connect_userdb",
         },
         function(err){
             console.log(err ||  'connect-mongodb setup ok');
