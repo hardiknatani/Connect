@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
 header {
-  height: 5vh;
-  background-color: aquamarine;
+  height: 7.5vh;
+  background-color: #A6DCEF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +19,22 @@ header {
   gap: 10px;
 }
 
+header > a {
+  text-decoration: none;
+}
+
+.logo {
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: xx-large;
+  margin-left: 1.5vw;
+}
+
+.logo > span {
+  font-family: 'Bakbak One', cursive;
+}
+
 .auth {
+  margin-right: 1.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,5 +48,14 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1vw;
+}
+
+.auth > a {
+  padding: 5px;
+  background-color: #3C70A4;
+  border-radius: 10px;
+  text-decoration: none;
+  color: whitesmoke;
 }
 /*# sourceMappingURL=header.css.map */

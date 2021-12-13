@@ -1,15 +1,17 @@
-<li>
-    <p>
+<li class="user-comment" >
+    <p >
+        <span><%=comment.user.name%></span>
+        <small>
+            <%=comment.content%>
+        
+      
         <%if (locals.user && locals.user.id==comment.user.id){%>
-            <small>
-                <a href="/comments/destroy/<%=comment.id%>">Delete</a>
+            
+                <a href="/comments/destroy/<%=comment.id%>"><img src="/images//delete-icon.png" alt="" srcset=""></a>
             </small>
             <%}%>
 
-        <%=comment.content%>
-        <br>
-        <small>
-            <%=comment.user.name%>
-        </small>
+     
+       
     </p>
 </li>

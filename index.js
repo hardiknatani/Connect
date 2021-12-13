@@ -50,7 +50,7 @@ app.use(customMiddleware.setFlash);
 app.use("/",require('./routes/index'))
 
 
-app.listen(port,(err)=>{
+app.listen(process.env.PORT ||port,(err)=>{
     if (err){
         console.log(err)
     }

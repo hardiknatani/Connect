@@ -1,0 +1,222 @@
+$color1:#DDF3F5;
+$color2:#A6DCEF;
+$color3:#8BCDCD;
+$color4:#84DFFF;
+$color5:#F6AD7B;
+$color6:#3C70A4;
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+
+
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Fuzzy Bubbles', cursive;
+    color:#142F43;
+
+
+}
+
+body{
+    min-height: 100vh;
+}
+
+h1{
+    margin: 2.5vh 2.5vw;
+}
+
+.create-post{
+    margin: 2.5vh 2.5vw;
+    width: fit-content;
+    border: 1px solid $color3;
+    border-radius: 10px 10px 10px 10px;
+    background-color: $color2;
+    padding: 7.5px;
+    >h3{
+        text-indent:10px ;
+    }
+
+    >form{
+        display: flex;
+        align-items: center;
+        gap:0.5vw;
+        >textarea{
+            border-radius: 2.5px;
+            text-indent: 10px;
+            padding: 5px;
+        }
+        >input{
+            border-radius: 7.5px;
+            outline: none;
+            border:none;
+            padding:2.5px;
+            background-color: $color6;
+            padding: 5px;
+
+        }
+    }
+}
+
+#user-friends{
+    >h4{font-size: 1.5rem;
+
+    }
+    font-size: 1rem;
+    padding-left: 1.5vw;
+    border-left: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
+    position: absolute;
+    right: 0;
+    top:10vh;
+    margin-right:2.5vw ;
+
+    
+}
+
+
+
+.post{
+    margin: 4vh 2.5vw 0 2.5vw;
+    width:35vw;
+    font-size: 1.5rem;
+    border-radius: 10px 10px 0 0;
+    border:1px solid $color3;
+    color:#142F43;
+    box-shadow: -7px -4px 16px 6px rgba(145,166,179,0.75);
+    -webkit-box-shadow: -7px -4px 16px 6px rgba(145,166,179,0.75);
+    -moz-box-shadow: -7px -4px 16px 6px rgba(145,166,179,0.75);
+    
+    >span{
+        display: block;
+        font-weight: bold;
+        font-size: 1.25rem;
+        padding: 10px;
+        background-color: $color6;
+        margin: none;
+        border-radius: 10px 10px 0 0;
+
+    }
+
+  
+    >small{
+        padding: 10px 0px 10px 10px;
+        font-size: 2rem;
+        width: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    >a{
+        padding: 10px;
+    }
+
+
+    }
+
+
+    
+}
+
+
+
+.create-comment{
+    background-color: $color4;
+    margin: 0 2.5vw;
+    width:35vw;
+    border:1px solid $color3;
+    box-shadow: 0px -4px 16px 6px rgba(145,166,179,0.75);
+    -webkit-box-shadow: 0px -4px 16px 6px rgba(145,166,179,0.75);
+    -moz-box-shadow: 0px -4px 16px 6px rgba(145,166,179,0.75);
+
+>form>input{
+    margin: 10px;
+    border-radius: 5px;
+    text-indent: 10px;
+    border: none;
+    padding: 5px;
+    
+}
+
+}
+
+#comment-btn{
+    background-color: $color6;
+    text-indent: 0;
+    padding: 5px;
+}
+
+
+
+
+.user-comment{
+    background-color: grey;
+    margin: 0 2.5vw;
+    width:35vw;
+    border:1px solid $color3;
+    box-shadow: 0px -4px 16px 6px rgba(145,166,179,0.75);
+    -webkit-box-shadow: 0px -4px 16px 6px rgba(145,166,179,0.75);
+    -moz-box-shadow: 0px -4px 16px 6px rgba(145,166,179,0.75);
+
+    background: linear-gradient($color2, $color1);
+    >p{ padding: 10px 0 10px 25px;
+
+
+
+
+
+        >span{
+            display: block;
+        }
+        >small{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+        }
+    }
+
+
+
+}
+
+
+
+////alt-root
+#alt-route{
+margin-top: 25vh;
+margin-bottom: 42.25    vh;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.25vw;
+>.text{
+    border-right: 1px solid black;
+    padding-right: 1.25vw;
+    >small{
+        font-size: 1rem;
+        display: block;
+        
+    }
+    >span{
+        color: $color6;
+        font-size: 3rem;
+    }
+    
+}
+>.login-btns{
+    >a{
+        padding: 10px;
+        background-color: $color6;
+        border-radius: 10px;
+        text-decoration: none;
+        color: whitesmoke;
+    }
+}
+}
+
+
+// footer{position: absolute;
+// bottom: 0;}

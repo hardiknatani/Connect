@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Fuzzy Bubbles', cursive;
+  color: #142F43;
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 2.5vh 2.5vw;
+}
+
+.create-post {
+  margin: 2.5vh 2.5vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #8BCDCD;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #A6DCEF;
+  padding: 7.5px;
+}
+
+.create-post > h3 {
+  text-indent: 10px;
+}
+
+.create-post > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5vw;
+}
+
+.create-post > form > textarea {
+  border-radius: 2.5px;
+  text-indent: 10px;
+  padding: 5px;
+}
+
+.create-post > form > input {
+  border-radius: 7.5px;
+  outline: none;
+  border: none;
+  padding: 2.5px;
+  background-color: #3C70A4;
+  padding: 5px;
+}
+
+#user-friends {
+  font-size: 1rem;
+  padding-left: 1.5vw;
+  border-left: 1px solid grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1vh;
+  position: absolute;
+  right: 0;
+  top: 10vh;
+  margin-right: 2.5vw;
+}
+
+#user-friends > h4 {
+  font-size: 1.5rem;
+}
+
+.post {
+  margin: 4vh 2.5vw 0 2.5vw;
+  width: 35vw;
+  font-size: 1.5rem;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #8BCDCD;
+  color: #142F43;
+  box-shadow: -7px -4px 16px 6px rgba(145, 166, 179, 0.75);
+  -webkit-box-shadow: -7px -4px 16px 6px rgba(145, 166, 179, 0.75);
+  -moz-box-shadow: -7px -4px 16px 6px rgba(145, 166, 179, 0.75);
+}
+
+.post > span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 10px;
+  background-color: #3C70A4;
+  margin: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.post > small {
+  padding: 10px 0px 10px 10px;
+  font-size: 2rem;
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post > small > a {
+  padding: 10px;
+}
+
+.create-comment {
+  background-color: #84DFFF;
+  margin: 0 2.5vw;
+  width: 35vw;
+  border: 1px solid #8BCDCD;
+  box-shadow: 0px -4px 16px 6px rgba(145, 166, 179, 0.75);
+  -webkit-box-shadow: 0px -4px 16px 6px rgba(145, 166, 179, 0.75);
+  -moz-box-shadow: 0px -4px 16px 6px rgba(145, 166, 179, 0.75);
+}
+
+.create-comment > form > input {
+  margin: 10px;
+  border-radius: 5px;
+  text-indent: 10px;
+  border: none;
+  padding: 5px;
+}
+
+#comment-btn {
+  background-color: #3C70A4;
+  text-indent: 0;
+  padding: 5px;
+}
+
+.user-comment {
+  background-color: grey;
+  margin: 0 2.5vw;
+  width: 35vw;
+  border: 1px solid #8BCDCD;
+  box-shadow: 0px -4px 16px 6px rgba(145, 166, 179, 0.75);
+  -webkit-box-shadow: 0px -4px 16px 6px rgba(145, 166, 179, 0.75);
+  -moz-box-shadow: 0px -4px 16px 6px rgba(145, 166, 179, 0.75);
+  background: -webkit-gradient(linear, left top, left bottom, from(#A6DCEF), to(#DDF3F5));
+  background: linear-gradient(#A6DCEF, #DDF3F5);
+}
+
+.user-comment > p {
+  padding: 10px 0 10px 25px;
+}
+
+.user-comment > p > span {
+  display: block;
+}
+
+.user-comment > p > small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#alt-route {
+  margin-top: 25vh;
+  margin-bottom: 42.25    vh;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25vw;
+}
+
+#alt-route > .text {
+  border-right: 1px solid black;
+  padding-right: 1.25vw;
+}
+
+#alt-route > .text > small {
+  font-size: 1rem;
+  display: block;
+}
+
+#alt-route > .text > span {
+  color: #3C70A4;
+  font-size: 3rem;
+}
+
+#alt-route > .login-btns > a {
+  padding: 10px;
+  background-color: #3C70A4;
+  border-radius: 10px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+/*# sourceMappingURL=home.css.map */

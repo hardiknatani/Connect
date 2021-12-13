@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+
+h1{
+    margin: 2.5vh 2.5vw;
+    font-family: 'Fuzzy Bubbles', cursive;
+
+}
+
+input{
+    margin: 1vw;
+    border-radius: 5px;
+    text-indent: 10px;
+    border: none;
+    padding: 5px;
+}
+
+button{
+
+    border-radius: 7.5px;
+    outline: none;
+    border:none;
+    padding:2.5px;
+    background-color: #3C70A4;
+    padding: 5px;
+}
+form{
+    margin-bottom: 65.5vh;
+}

@@ -1,1 +1,14 @@
-/* No CSS *//*# sourceMappingURL=layout.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #DDF3F5;
+}
+
+#layout-main {
+  position: relative;
+  min-height: 100vh;
+}
+/*# sourceMappingURL=layout.css.map */

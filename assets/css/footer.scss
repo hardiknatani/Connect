@@ -1,15 +1,32 @@
+// *{
+//     margin:0;
+//     padding: 0;
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
 
 
 footer{
-    position:absolute;
+    z-index: 1;
+    font-family: 'Fuzzy Bubbles', cursive;
+    position:unset;     
     bottom:0;
     width:100%;
-    height:60px;   /* Height of the footer */
+    height:60px;   
     background:#6cf; 
     display: flex;
+    gap:5vw;
+    justify-content: center;
+    align-items: center;
 }
 
 main{
     display: flex;
     flex-direction: column;
+
+    >a{
+        font-weight: 800;
+        text-decoration: none;
+
+    }
 }

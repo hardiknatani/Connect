@@ -1,52 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="/css/home.css">
     <title>
         <%=title%>
     </title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
+
 <body>
-    <h1>
-        Connect Home
-    </h1>
-
-<%if (locals.user){%>
-    <section>
-
-        <h3>Create Post</h3>
-        <form action="/posts/createPost" id='new-post-form' method='POST'>
-
-            <textarea type="text" name="content" cols="30" rows="3" id="" placeholder="Type Here" required></textarea>
-                
-            <input type="submit" value="Post">
-
-        </form>
-    </section>
-<%}%>
 
 
-    <div id="posts-container">
-        <ul>
-        <% for (post of posts){%>
+    <div id="home-container">
+        <%if (locals.user){%>
+        <h1>
+            Hey, <%= locals.user.name %> 
+        </h1>
 
-        <%- include('post'); %>
+        
 
-        <%}%>
-        </ul>
+
+                <section class="create-post">
+                    <h3>Post Something</h3>
+
+                    <form action="/posts/createPost" id='new-post-form' method='POST'>
+
+                        <textarea type="text" name="content" cols="30" rows="3" id=""
+                            placeholder="What you thinking about?" required></textarea>
+
+                        <input type="submit" value="Post">
+
+                    </form>
+
+                   
+
+
+
+                </section>
+
+                <div id="posts-container">
+                    <ul style="list-style-type:none;">
+                        <% for (post of posts){%>
+
+                            <%- include('post'); %>
+
+                                <%}%>
+                    </ul>
+                </div>
+
+        <section id="user-friends">
+            <h4>Explore Other Users</h4>
+            <% for (u of all_users){%>
+                <p>
+                    <a href="/users/profile/<%= u.id %>">
+                        <%=u.name%>
+                    </a>
+                </p>
+                <%}%>
+        </section>
+        <%}else{%>
+
+<div id="alt-route">
+    <div class="text">
+        Sign in 
+    <small> to post &</small> 
+    <span>Connect! </span>
+    </div>
+    <hr>
+    <div class="login-btns">
+        <a href="/users/signup">SignUp</a>
+        <a href="/users/signin">SignIn</a>
+    </div>
+    
+</div>
+
+            <%}%>
     </div>
 
-    <section id="user-friends">
-<h4>Friends</h4>
-<% for (u of all_users){%>
-    <p>
-        <a href="/users/profile/<%= u.id %>"> <%=u.name%></a>
-    </p>
-    <%}%>
-    </section>
-
 </body>
+
 </html>
