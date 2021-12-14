@@ -176,7 +176,7 @@ h1 {
 
 #alt-route {
   margin-top: 25vh;
-  margin-bottom: 42.25    vh;
+  margin-bottom: 42.25vh;
   font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,5 +211,36 @@ h1 {
   border-radius: 10px;
   text-decoration: none;
   color: whitesmoke;
+}
+
+@media screen and (max-width: 1080px) {
+  #alt-route {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2vw;
+  }
+  #alt-route > .text {
+    text-align: center;
+    border: none;
+  }
+  #alt-route > .text > span {
+    color: #3C70A4;
+    font-size: 3rem;
+  }
+  .post, .create-comment, .user-comment {
+    width: 80vw;
+    margin-left: 5vw;
+  }
+  .post > small, .create-comment > small, .user-comment > small {
+    font-size: medium;
+  }
+  #user-friends {
+    visibility: hidden;
+  }
 }
 /*# sourceMappingURL=home.css.map */

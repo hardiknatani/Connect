@@ -186,7 +186,7 @@ h1{
 ////alt-root
 #alt-route{
 margin-top: 25vh;
-margin-bottom: 42.25    vh;
+margin-bottom: 42.25vh;
     font-size: 2rem;
     display: flex;
     justify-content: center;
@@ -220,3 +220,43 @@ margin-bottom: 42.25    vh;
 
 // footer{position: absolute;
 // bottom: 0;}
+
+
+@media screen and (max-width:1080px) {
+    #alt-route{
+            display: flex;
+            flex-direction: column;
+            gap:2vw;
+          
+        >.text{
+            text-align: center;
+            border:none;
+
+
+            >span{
+                color: $color6;
+                font-size: 3rem;
+            }
+            
+        }
+        }
+           
+        .post,.create-comment,.user-comment{
+            width: 80vw;
+            margin-left: 5vw;
+            >small{
+                font-size: medium;
+                
+                // overflow-x:auto;
+            }
+        }
+
+        #user-friends{
+            visibility: hidden;
+        
+        }
+
+
+
+
+    }

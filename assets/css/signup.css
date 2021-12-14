@@ -27,7 +27,30 @@ button{
     padding:2.5px;
     background-color: #3C70A4;
     padding: 5px;
+    color:white;
+
 }
 form{
     margin-bottom: 65.5vh;
+}
+
+@media screen and (max-width:1080px) {
+    h1{
+        text-align: center;
+    }
+
+    form{
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1vh;
+        margin-bottom: auto;
+    }
+    
+    input{
+        width:50vw;
+    }
+
 }
